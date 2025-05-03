@@ -89,7 +89,7 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
-  max-width: 850px;
+  max-width: 1200px;
   margin: 0 auto;
   background: var(--container-bg);
   backdrop-filter: blur(15px);
@@ -99,7 +99,7 @@ table {
   overflow: hidden;
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 table:hover {
@@ -108,12 +108,11 @@ table:hover {
 }
 
 th, td {
-  padding: 16px 10px;
+  padding: 16px 20px;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
   vertical-align: middle;
-  white-space: normal;
-  word-break: break-word;
+  white-space: nowrap;
 }
 
 tr:not(#totals-row):last-child td {
@@ -131,7 +130,7 @@ th {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 12px 10px;
+  padding: 12px 15px;
   white-space: nowrap;
 }
 
@@ -149,15 +148,15 @@ td {
 }
 
 input[type="number"] {
-  width: 60px;
+  width: 70px;
   max-width: 100%;
-  padding: 8px 8px;
+  padding: 8px 10px;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   background-color: var(--input-bg);
   color: var(--text-light);
   font-family: var(--font-primary);
-  font-size: 0.95em;
+  font-size: 1em;
   text-align: center;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   appearance: textfield;
@@ -192,7 +191,7 @@ input[type="number"]::placeholder {
   font-weight: 700;
   font-size: 1.05rem;
   border: none;
-  padding: 16px 10px;
+  padding: 16px 20px;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
@@ -241,7 +240,7 @@ input[type="number"]::placeholder {
     font-size: 2.2rem;
   }
   th, td {
-    padding: 14px 8px;
+    padding: 14px 15px;
   }
 }
 
@@ -258,29 +257,27 @@ input[type="number"]::placeholder {
     overflow-y: auto;
   }
   table {
-    width: 90%;
-    max-width: 100%;
     box-shadow: 0 10px 25px var(--shadow-color);
     border-radius: 12px;
     --table-border-radius: 12px;
   }
   th, td {
-    padding: 10px 6px;
-    font-size: 0.75rem;
+    padding: 10px 8px;
+    font-size: 0.8rem;
   }
   th {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    padding: 10px 6px;
+    padding: 10px 8px;
   }
   input[type="number"] {
-    width: 50px;
-    padding: 6px 6px;
-    font-size: 0.75rem;
+    width: 55px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
   }
   #totals-row td {
-    font-size: 0.85rem;
-    padding: 12px 6px;
+    font-size: 0.9rem;
+    padding: 12px 8px;
   }
   .btn {
     font-size: 0.9em;
@@ -298,23 +295,20 @@ input[type="number"]::placeholder {
   h1 {
     font-size: 1.6rem;
   }
-  table {
-    width: 85%;
-  }
   th, td {
-    padding: 8px 4px;
-    font-size: 0.7rem;
+    padding: 8px 5px;
+    font-size: 0.75rem;
   }
   th {
-    font-size: 0.6rem;
-    padding: 8px 4px;
+    font-size: 0.65rem;
+    padding: 8px 5px;
   }
   input[type="number"] {
-    width: 40px;
+    width: 45px;
   }
   #totals-row td {
-    font-size: 0.75rem;
-    padding: 10px 4px;
+    font-size: 0.8rem;
+    padding: 10px 5px;
   }
   .btn {
     font-size: 0.85em;
