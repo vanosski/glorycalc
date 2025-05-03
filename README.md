@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+Glory Calculator
+Overview
+The Glory Calculator is a React-based web application designed to help users calculate unit stats, glory costs, protection blessings, and attack blessings for various troop types. Users can input levels (0-50) and star levels (0-10) for each troop type, set a glory balance, and view the total stats, costs, and blessings. The app also includes features to clear inputs or maximize them to their highest values.
+Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dynamic Table: Displays troop types with input fields for level and star level, and calculates stats, glory cost, and blessings in real-time.
+Totals Calculation: Summarizes total stats, glory cost, protection blessings, and attack blessings across all units.
+Glory Balance: Allows users to input a glory balance and see the remaining balance after subtracting the total glory cost.
+Clear and Maximize Inputs: Buttons to reset all inputs to 0 or set them to maximum values (Level: 50, Star Level: 10).
+Responsive Design: Adapts to different screen sizes for a seamless experience on desktop and mobile devices.
+Custom Styling: Uses a gradient background, blurred table effects, and modern typography with the Poppins font.
 
-## Available Scripts
+Project Structure
 
-In the project directory, you can run:
+src/App.js: The root component that renders the header, main content (CalculatorTable), and footer.
+src/CalculatorTable.js: Manages the state and logic for the table, including input handling and totals calculation.
+src/UnitRow.js: Renders individual rows for each troop type, displaying inputs and calculated values.
+src/styles.css: Contains all styling for the app, including layout, colors, and responsive design.
+src/unit-data.js: Exports the unitData object with troop data (level costs, star costs, stat increases, blessings).
+public/trophy.ico: Favicon for the app, representing the "Glory" theme.
+public/trophy192.png: Apple Touch icon for iOS devices.
 
-### `npm start`
+Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Input Levels and Star Levels:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For each troop type, enter a level (0-50) and star level (0-10) in the respective input fields.
+The table will automatically update to show the total stats, glory cost, protection blessing, and attack blessing for each unit.
 
-### `npm test`
+Set Glory Balance:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Enter a value in the "Glory Balance" input in the footer.
+The "Left Over" field will show the remaining balance after subtracting the total glory cost.
 
-### `npm run build`
+Clear or Maximize Inputs:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Click "Clear Inputs" to reset all levels and star levels to 0, and clear the glory balance.
+Click "Maximize Inputs" to set all levels to 50 and star levels to 10, while leaving the glory balance unchanged.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React: For building the user interface with components.
+JavaScript (ES6+): For logic and calculations.
+CSS: For styling, including flexbox for layout and responsive design.
+Google Fonts (Poppins): For modern typography.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
