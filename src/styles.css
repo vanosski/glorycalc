@@ -75,6 +75,12 @@ footer p {
   margin: 0;
 }
 
+/* --- Table Container Styling --- */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
 /* --- Table Styling --- */
 table {
   border-collapse: separate;
