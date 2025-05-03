@@ -1,7 +1,5 @@
-/* Import Poppins Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* --- Base & Variables --- */
 :root {
   --font-primary: 'Poppins', sans-serif;
   --primary-color: #6a11cb;
@@ -21,7 +19,6 @@
   --table-border-radius: 16px;
 }
 
-/* Body Styling */
 body {
   font-family: var(--font-primary);
   background: var(--bg-gradient);
@@ -37,7 +34,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header Styling */
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -52,7 +48,6 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Main Content Styling */
 main {
   flex: 1;
   display: flex;
@@ -61,7 +56,6 @@ main {
   width: 100%;
 }
 
-/* Footer Styling */
 footer {
   text-align: center;
   margin-top: 20px;
@@ -75,14 +69,15 @@ footer p {
   margin: 0;
 }
 
-/* --- Table Container Styling --- */
 .table-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: auto;
-  width: 90%;
-  min-width: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* --- Table Styling --- */
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -97,6 +92,8 @@ table {
   overflow: hidden;
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+  table-layout: auto;
 }
 
 table:hover {
@@ -104,7 +101,6 @@ table:hover {
   box-shadow: 0 20px 45px var(--shadow-color);
 }
 
-/* Remaining styles (th, td, input, etc.) remain unchanged */
 th, td {
   padding: 16px 20px;
   text-align: center;
@@ -123,9 +119,12 @@ th {
   text-transform: uppercase;
   letter-spacing: 0.75px;
   font-size: 0.8rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
+  padding: 10px 8px;
+  white-space: nowrap;
 }
 
 tr {
@@ -219,10 +218,9 @@ input[type="number"]::placeholder {
   box-shadow: 0 3px 10px var(--shadow-color);
 }
 
-/* --- Responsive Design --- */
 @media (max-width: 768px) {
   body {
-    padding: 20px 10px;
+    padding: 10px 5px;
   }
 
   h1 {
@@ -230,27 +228,53 @@ input[type="number"]::placeholder {
     margin-bottom: 30px;
   }
 
+  .table-container {
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
   table {
     max-width: 100%;
     box-shadow: 0 10px 25px var(--shadow-color);
+    border-radius: 8px;
   }
 
   th, td {
-    padding: 12px 10px;
-    font-size: 0.9rem;
+    padding: 8px 6px;
+    font-size: 0.8rem;
   }
 
   th {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: var(--input-bg);
+    color: var(--text-light);
   }
 
   input[type="number"] {
-    width: 60px;
+    width: 50px;
     padding: 6px 8px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   #totals-row td {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  th, td {
+    padding: 6px 4px;
+    font-size: 0.75rem;
+  }
+
+  th {
+    font-size: 0.65rem;
+  }
+
+  input[type="number"] {
+    width: 45px;
   }
 }
