@@ -78,7 +78,8 @@ footer p {
 /* --- Table Container Styling --- */
 .table-container {
   overflow-x: auto;
-  width: 100%;
+  width: 90%;
+  min-width: 0;
 }
 
 /* --- Table Styling --- */
