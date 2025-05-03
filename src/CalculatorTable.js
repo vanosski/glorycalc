@@ -87,8 +87,8 @@ const CalculatorTable = () => {
           <th>Star Level</th>
           <th>Total Stats</th>
           <th>Glory</th>
-          <th>Protection Blessing</th>
-          <th>Attack Blessing</th>
+          <th>Protection</th>
+          <th>Attack</th>
         </tr>
       </thead>
       <tbody>
