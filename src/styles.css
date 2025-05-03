@@ -89,7 +89,7 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
-  max-width: 1200px;
+  max-width: 90vw;
   margin: 0 auto;
   background: var(--container-bg);
   backdrop-filter: blur(15px);
