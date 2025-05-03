@@ -1,48 +1,50 @@
-Glory Calculator
-Overview
-The Glory Calculator is a React-based web application designed to help users calculate unit stats, glory costs, protection blessings, and attack blessings for various troop types. Users can input levels (0-50) and star levels (0-10) for each troop type, set a glory balance, and view the total stats, costs, and blessings. The app also includes features to clear inputs or maximize them to their highest values.
-Features
+# Glory Calculator
 
-Dynamic Table: Displays troop types with input fields for level and star level, and calculates stats, glory cost, and blessings in real-time.
-Totals Calculation: Summarizes total stats, glory cost, protection blessings, and attack blessings across all units.
-Glory Balance: Allows users to input a glory balance and see the remaining balance after subtracting the total glory cost.
-Clear and Maximize Inputs: Buttons to reset all inputs to 0 or set them to maximum values (Level: 50, Star Level: 10).
-Responsive Design: Adapts to different screen sizes for a seamless experience on desktop and mobile devices.
-Custom Styling: Uses a gradient background, blurred table effects, and modern typography with the Poppins font.
+## Overview
 
-Project Structure
+Glory Calculator is a React-based web app that calculates unit stats, glory costs, and blessings for various troop types. Users input levels (0–50) and star levels (0–10), set a glory balance, and view computed stats, costs, and blessings. The app includes controls to reset or maximize inputs.
 
-src/App.js: The root component that renders the header, main content (CalculatorTable), and footer.
-src/CalculatorTable.js: Manages the state and logic for the table, including input handling and totals calculation.
-src/UnitRow.js: Renders individual rows for each troop type, displaying inputs and calculated values.
-src/styles.css: Contains all styling for the app, including layout, colors, and responsive design.
-src/unit-data.js: Exports the unitData object with troop data (level costs, star costs, stat increases, blessings).
-public/trophy.ico: Favicon for the app, representing the "Glory" theme.
-public/trophy192.png: Apple Touch icon for iOS devices.
+## Features
 
-Usage
+- **Dynamic Table**: Real-time calculation of stats, glory cost, and blessings for each troop type.
+- **Totals Summary**: Aggregates total stats, glory cost, and blessings.
+- **Glory Balance Tracker**: Displays remaining balance after deducting total glory cost.
+- **Input Controls**: Buttons to reset or maximize all values (Level: 50, Star Level: 10).
+- **Responsive Design**: Optimized for desktop and mobile use.
+- **Modern Styling**: Gradient background, blur effects, and Poppins font.
 
-Input Levels and Star Levels:
+## Project Structure
 
-For each troop type, enter a level (0-50) and star level (0-10) in the respective input fields.
-The table will automatically update to show the total stats, glory cost, protection blessing, and attack blessing for each unit.
+- `src/App.js`: Main component rendering header, content, and footer.
+- `src/CalculatorTable.js`: Core logic and state management for the calculator.
+- `src/UnitRow.js`: Renders each unit row with inputs and calculations.
+- `src/styles.css`: App-wide styling and layout.
+- `src/unit-data.js`: Defines unit stats, costs, and blessing data.
+- `public/trophy.ico`: Favicon.
+- `public/trophy192.png`: iOS touch icon.
 
-Set Glory Balance:
+## Usage
 
-Enter a value in the "Glory Balance" input in the footer.
-The "Left Over" field will show the remaining balance after subtracting the total glory cost.
+### Input Levels and Star Levels
 
-Clear or Maximize Inputs:
+Set level (0–50) and star level (0–10) per troop. Calculations update automatically.
 
-Click "Clear Inputs" to reset all levels and star levels to 0, and clear the glory balance.
-Click "Maximize Inputs" to set all levels to 50 and star levels to 10, while leaving the glory balance unchanged.
+### Set Glory Balance
 
-Technologies Used
+Input a value in the "Glory Balance" field. Remaining balance is shown after deducting total cost.
 
-React: For building the user interface with components.
-JavaScript (ES6+): For logic and calculations.
-CSS: For styling, including flexbox for layout and responsive design.
-Google Fonts (Poppins): For modern typography.
+### Input Controls
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+- **Clear Inputs**: Resets all fields to 0 and clears the balance.
+- **Maximize Inputs**: Sets all levels to 50 and stars to 10; balance remains unchanged.
+
+## Technologies Used
+
+- **React**: Component-based UI framework.
+- **JavaScript (ES6+)**: Application logic.
+- **CSS**: Styling with responsive layout.
+- **Google Fonts (Poppins)**: Typography.
+
+## License
+
+MIT License. See `LICENSE` for details.
