@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling if needed */
+}
+
+table {
+  width: 100%;
+  max-width: 90vw; /* Limits table width to 90% of viewport */
+  table-layout: fixed; /* Prevents column stretching */
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+th, td {
+  padding: 6px; /* Reduced padding for mobile */
+  font-size: 14px; /* Smaller font for mobile */
+  text-align: center;
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Handles long text */
+}
+
+th {
+  font-weight: bold;
+  font-size: 16px; /* Slightly larger for headers */
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+  table {
+    max-width: 95vw; /* Tighter fit for smaller screens */
+  }
+  th, td {
+    padding: 4px; /* Further reduced padding */
+    font-size: 12px; /* Smaller font for mobile */
+  }
+  th {
+    font-size: 14px;
+  }
+}
